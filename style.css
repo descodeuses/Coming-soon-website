@@ -1,0 +1,100 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Structure */
+.container {
+    background-image: url("../images/bg_dc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Flex settings */
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-align-center {
+    align-items: center;
+}
+.flex-justify-center {
+    justify-content: center;
+}
+.flex-justify-space-between {
+    justify-content: space-between;
+}
+.flex-justify-space-around {
+    justify-content: space-around;    
+}
+
+
+/* Global style */
+nav {
+    padding: 1rem;
+}
+nav a {
+    color: #fff;
+    padding: 1rem;
+}
+.logo img {
+    width: 200px;
+}
+main {
+    color: #fff;
+    padding: 1rem;
+    width: 100%;
+}
+h1, .point-1, .point-2, .point-3 {
+    font-size: 4.5rem;
+}
+
+
+/* Animation */
+@keyframes jumping {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.point-1, .point-2, .point-3 {
+    position: absolute;
+    padding: 0 1rem;
+    animation: jumping 1s ease-in-out infinite;
+}
+.point-2 {
+    animation-delay: 1200ms;
+}
+.point-3 {
+    animation-delay: 1400ms;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+     
+    h1, .point-1, .point-2, .point-3 {
+        font-size: 2rem;
+    }
+}
+    
